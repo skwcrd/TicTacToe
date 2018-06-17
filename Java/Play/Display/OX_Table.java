@@ -1,31 +1,25 @@
 package Play.Display;
 import Play.Interfacing.InDisplay;
 import Play.Player;
-
-public class OX_Table implements InDisplay{ //TicTacToe table for show out
-
+public class OX_Table implements InDisplay { //TicTacToe table for show out
     private char[][] data;
     private int num;
     private char c;
-
     public void Table(Player person) {
         data = person.getData();
         c = person.p1;
         num = 0;
     }
-
     public void Table(Player person,int n) {
         data = person.getData();
         switch (n) {
             case 1 : c = person.p1;
                 break;
-
             case 2 : c = person.p2;
                 break;
         }
         num = n;
     }
-
     @Override
     public String output() {
         String st1,st2,row1,row2,row3,betw1,betw2,betw3,betw;
@@ -40,7 +34,6 @@ public class OX_Table implements InDisplay{ //TicTacToe table for show out
         st2 = "\nPlease input number [1-9 only]\n\n";
         return st1 + row1 + betw + row2 + betw + row3 + st2;
     }
-
     @Override
     public String title() {
         String title;
@@ -50,5 +43,4 @@ public class OX_Table implements InDisplay{ //TicTacToe table for show out
             title = "Player [" + c + "]";
         return title;
     }
-
 }
