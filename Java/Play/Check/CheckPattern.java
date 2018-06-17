@@ -1,12 +1,9 @@
 package Play.Check;
 import Play.Player;
-
 public class CheckPattern {
-
     private boolean[] empty = new boolean[9];
     private boolean[][] pos_p = new boolean[3][3];
     private int pos;
-
     public CheckPattern(Player person) {
         char tmp = person.p1;
         for (int i=0;i<3;i++) { //check data
@@ -16,7 +13,6 @@ public class CheckPattern {
             }
         }
     }
-
     public int search() {
         boolean pat1,pat2,pat3,pat4,pat5,pat6;
         pat1 = (pos_p[0][0] && pos_p[1][1]) || (pos_p[0][2] && pos_p[1][1]) || (pos_p[2][0] && pos_p[1][1]) || (pos_p[2][2] && pos_p[1][1]);
@@ -25,24 +21,18 @@ public class CheckPattern {
         pat4 = pos_p[0][0] || pos_p[0][2] || pos_p[2][0] || pos_p[2][2];
         pat5 = pos_p[0][1] || pos_p[1][0] || pos_p[1][2] || pos_p[2][1];
         pat6 = pos_p[1][1] || (!empty[4]);
-        if(pat1) {
+        if(pat1)
             this.odd2();
-        }
-        else if(pat2) {
+        else if(pat2)
             this.even();
-        }
-        else if (pat3) {
+        else if (pat3)
             pos = 5;
-        }
-        else if(pat4) {
+        else if(pat4)
             this.odd();
-        }
-        else if (pat5) {
+        else if (pat5)
             this.odd();
-        }
-        else if (pat6) {
+        else if (pat6)
             this.odd2();
-        }
         else {
             while (true) {
                 pos = (((int) (Math.round(Math.random() * 10))) % 9) + 1;
@@ -52,7 +42,6 @@ public class CheckPattern {
         }
         return pos;
     }
-
     private void even() {
         boolean tmp,pat1,pat2,pat3,pat4;
         while (true) {
@@ -66,7 +55,6 @@ public class CheckPattern {
                 break;
         }
     }
-
     private void odd() {
         boolean tmp,pat1,pat2,pat3,pat4;
         while (true) {
@@ -80,7 +68,6 @@ public class CheckPattern {
                 break;
         }
     }
-
     private void odd2() {
         boolean tmp,pat;
         while (true) {
@@ -93,7 +80,6 @@ public class CheckPattern {
                 break;
         }
     }
-
     private boolean patt(boolean p1,boolean p2,boolean p3,boolean p4,boolean p5) {
         boolean p = false;
         if(p1)
@@ -108,5 +94,4 @@ public class CheckPattern {
             p = true;
         return p;
     }
-
 }
