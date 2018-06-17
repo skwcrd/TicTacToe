@@ -2,14 +2,11 @@ package Play;
 import Play.Menu.*;
 import Play.Display.MENU;
 import javax.swing.JOptionPane;
-
 public class Start {
     /*Class for start the program*/
-
     public Start() {
         this.showMenu(); //start working
     }
-
     private void showMenu() {
         MENU m = new MENU();
         String input,output,title; //variable for all menu
@@ -42,7 +39,6 @@ public class Start {
         this.menu(menu);
         System.exit(0);
     }
-
     private void menu(int m) { //Worked by menu input
         switch (m) {
             case 1 : new SinglePlayer();
@@ -57,5 +53,4 @@ public class Start {
                 default : System.exit(0);
         }
     }
-
 }
