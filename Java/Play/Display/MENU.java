@@ -1,8 +1,6 @@
 package Play.Display;
 import Play.Interfacing.InDisplay;
-
 public class MENU implements InDisplay { //list menu for show out
-
     @Override
     public String output() {
         String st1,st2,m1,m2,m3,tab; //variable for all menu
@@ -16,10 +14,8 @@ public class MENU implements InDisplay { //list menu for show out
         /*------------------------------------------------------------*/
         return st1 + m1 + m2 + m3 + st2;
     }
-
     @Override
     public String title() {
         return "Welcome to TicTacToe Game";
     }
-
 }
