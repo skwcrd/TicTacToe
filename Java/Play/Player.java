@@ -2,13 +2,10 @@ package Play;
 import Play.Menu.Exit;
 import Play.Display.MODE;
 import javax.swing.JOptionPane;
-
 public class Player {
-
     private char[][] data;
     private int mode,result1,result2;
     public char p1,p2; //player 1 and player 2 ['X' or 'O']
-
     /*===================== Player =====================*/
     public Player() {
         data = new char[3][3];
@@ -20,7 +17,6 @@ public class Player {
         result1 = 0;
         result2 = 0;
     }
-
     public void setPlayer(char p) {
         switch (p) {
             case 'X' :  p1 = 'X';
@@ -32,8 +28,6 @@ public class Player {
                 break;
         }
     }
-    /*==================================================*/
-
     /*===================== Result =====================*/
     public int getResult(int n) {
         int result;
@@ -48,7 +42,6 @@ public class Player {
         }
         return result;
     }
-
     public void setResult(int result,int n) {
         switch (n) {
             case 1 : result1 = result;
@@ -58,7 +51,6 @@ public class Player {
                 break;
         }
     }
-
     public void addResult(int result,int n) {
         switch (n) {
             case 1 : result1 += result;
@@ -68,17 +60,13 @@ public class Player {
                 break;
         }
     }
-    /*==================================================*/
-
     /*====================== Data ======================*/
     public char[][] getData() {
         return data;
     }
-
     public char getData(int i,int j) {
         return data[i][j];
     }
-
     public void setData(char d,int pos) {
         for (int c=0,i=0;i<3&&c==0;i++) {
             for (int j=0;j<3&&c==0;j++) {
@@ -89,13 +77,10 @@ public class Player {
             }
         }
     }
-    /*==================================================*/
-
     /*====================== Mode ======================*/
     public int getMode() {
         return mode;
     }
-
     public void setMode() {
         MODE m = new MODE();
         String input=null;
@@ -129,6 +114,4 @@ public class Player {
             }
         }
     }
-    /*==================================================*/
-
 }
