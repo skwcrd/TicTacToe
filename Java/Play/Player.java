@@ -22,7 +22,6 @@ public class Player {
             case 'X' :  p1 = 'X';
                 p2 = 'O';
                 break;
-
             case 'O' :  p1 = 'O';
                 p2 = 'X';
                 break;
@@ -34,11 +33,9 @@ public class Player {
         switch (n) {
             case 1 : result = result1;
                 break;
-
             case 2 : result = result2;
                 break;
-
-                default: result = 0;
+            default : result = 0;
         }
         return result;
     }
@@ -46,7 +43,6 @@ public class Player {
         switch (n) {
             case 1 : result1 = result;
                 break;
-
             case 2 : result2 = result;
                 break;
         }
@@ -55,7 +51,6 @@ public class Player {
         switch (n) {
             case 1 : result1 += result;
                 break;
-
             case 2 : result2 += result;
                 break;
         }
@@ -88,14 +83,7 @@ public class Player {
         while (ch==0) { //loop exception
             try {
                 /*input select mode [Easy,Medium,Hard,Very Hard]*/
-                input = (String) JOptionPane.showInputDialog(null,
-                        m.output(),
-                        m.title(),
-                        JOptionPane.PLAIN_MESSAGE,
-                        null,
-                        m.getList(),
-                        m.getList(0));
-                /**/
+                input = (String) JOptionPane.showInputDialog(null,m.output(),m.title(),JOptionPane.PLAIN_MESSAGE,null,m.getList(),m.getList(0));
                 if(input.equals(m.getList(0)))
                     mode = 1;
                 else if(input.equals(m.getList(1)))
