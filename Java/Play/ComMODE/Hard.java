@@ -1,21 +1,17 @@
 package Play.ComMODE;
 import Play.Check.ChecktoWin;
 import Play.Player;
-
 public class Hard {
-
     public Hard(Player person) {
-        int c=0,pos;
+        int c = 0,pos;
         ChecktoWin toWin = new ChecktoWin();
         pos = toWin.check(person,2);
-        if(pos>0) {
+        if(pos>0)
             person.setData(person.p2,pos);
-        }
         else {
             pos = toWin.check(person,1);
-            if(pos>0) {
+            if(pos>0)
                 person.setData(person.p2,pos);
-            }
             else {
                 while (c==0) {
                     pos = (((int) (Math.round(Math.random() * 10))) % 9) + 1;
@@ -31,5 +27,4 @@ public class Hard {
             }
         }
     }
-
 }
