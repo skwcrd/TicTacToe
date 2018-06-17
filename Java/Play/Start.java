@@ -43,14 +43,11 @@ public class Start {
         switch (m) {
             case 1 : new SinglePlayer();
                 break;
-
             case 2 : new TwoPlayer();
                 break;
-
             case 3 : new Exit();
                 break;
-
-                default : System.exit(0);
+            default : System.exit(0);
         }
     }
 }
