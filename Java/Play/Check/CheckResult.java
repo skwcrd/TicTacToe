@@ -1,8 +1,6 @@
 package Play.Check;
 import Play.Player;
-
 public class CheckResult {
-
     public int result(Player person,int n) { //check competition result
         new CheckPoint(person,n);
         int stop = 0;
@@ -12,5 +10,4 @@ public class CheckResult {
             stop = 1;
         return stop;
     }
-
 }
