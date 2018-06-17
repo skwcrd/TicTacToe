@@ -1,11 +1,8 @@
 package Play.Check;
 import Play.Player;
-
 class CheckPoint {
-
     private char[][] tmp;
     private char ch;
-
     CheckPoint(Player person, int n) {
         tmp = person.getData();
         person.setResult(0,n);
@@ -24,7 +21,6 @@ class CheckPoint {
             person.setResult(0,2);
         }
     }
-
     private void Horizontal(Player person, int n) {
         if(person.getResult(n)<=0) {
             for (int c=0,i=0; i<3 && c==0; i++) { //check for horizontal
@@ -35,7 +31,6 @@ class CheckPoint {
             }
         }
     }
-
     private void Vertical(Player person, int n) {
         if(person.getResult(n)<=0) {
             for(int c=0,i=0; i<3 && c==0; i++){ //check for vertical
@@ -46,19 +41,16 @@ class CheckPoint {
             }
         }
     }
-
     private void Diagonal1(Player person, int n) {
         if(person.getResult(n)<=0) { //check for diagonal
             if((tmp[0][0]==ch) && (tmp[1][1]==ch) && (tmp[2][2]==ch))
                 person.addResult(1,n);
         }
     }
-
     private void Diagonal2(Player person, int n) {
         if(person.getResult(n)<=0) { //check for diagonal
             if((tmp[0][2]==ch) && (tmp[1][1]==ch) && (tmp[2][0]==ch))
                 person.addResult(1,n);
         }
     }
-
 }
