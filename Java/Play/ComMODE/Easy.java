@@ -1,11 +1,9 @@
 package Play.ComMODE;
 import Play.Check.ChecktoWin;
 import Play.Player;
-
 public class Easy {
-
     public Easy(Player person) {
-        int c=0,pos;
+        int c = 0,pos;
         ChecktoWin toWin = new ChecktoWin();
         pos = toWin.check(person,2);
         if(pos>0) {
@@ -26,5 +24,4 @@ public class Easy {
             }
         }
     }
-
 }
